@@ -88,6 +88,18 @@ export const sources: SourceData[] = [
 		category: "Sports",
 	},
 	{
+		name: "PVZ 1",
+		URL: "https://skibidi-math.github.io/pvz1/",
+		description: "Plants vs. Zombies 1 is a tower defense game where you place plants to defend against waves of zombies.",
+		category: "Tower Defense",
+	},
+	{
+		name: "Games Launcher",
+		URL: "https://bestcalculatorforstudents.base44.app/Games",
+		description: "A games launcher made in base44. It has some games that I'm too lazy to directly port here.",
+		category: "Other Game Sites",
+	},
+	{
 		name: "20 Minutes Till Dawn",
 		URL: "https://skibidi-math.github.io/20-minutes/",
 		description: "20 Minutes Till Dawn is the full game of the demo 10 Minutes Till Dawn. It is a rougelike where you play as femboys and attack flying octopuses.",
