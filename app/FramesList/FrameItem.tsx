@@ -5,14 +5,6 @@ export type SourceData = {
 	category?: string;
 };
 
-function getHostname(sourceUrl: string) {
-	try {
-		return new URL(sourceUrl).hostname.replace(/^www\./, "");
-	} catch {
-		return sourceUrl;
-	}
-}
-
 export function FrameItem({
 	source,
 	isFavorite = false,
@@ -24,8 +16,6 @@ export function FrameItem({
 	onToggleFavorite?: (url: string) => void;
 	onOpen?: (url: string, title?: string) => void;
 }) {
-	const hostname = getHostname(source.URL);
-
 	return (
 		<article className="group flex h-full flex-col justify-between rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-500/70">
 			<div className="space-y-4">
@@ -49,12 +39,6 @@ export function FrameItem({
 			</div>
 
 			<div className="mt-6 flex items-center justify-between gap-3 border-t border-gray-100 pt-4 dark:border-gray-800">
-				<div className="flex items-center gap-3">
-					<span className="min-w-0 truncate text-sm text-gray-500 dark:text-gray-400">
-						{hostname}
-					</span>
-				</div>
-
 				<div className="flex items-center gap-2">
 					<button
 						type="button"

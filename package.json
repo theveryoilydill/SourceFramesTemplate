@@ -1,6 +1,6 @@
 {
-	"name": "sourceframes",
-	"private": true,
+	"name": "skibidi_math",
+	"private": false,
 	"type": "module",
 	"scripts": {
 		"build": "react-router build",
