@@ -1,3 +1,3 @@
-# Source Frames!
+# Skibidi Math
 
-This is a template for a react router app using hash router to build to html files only with no backend needed. You can add a customizable array of frames going to different URLS or doing different things.
+Skibidi math is a helpful website with many apps that will help students.
