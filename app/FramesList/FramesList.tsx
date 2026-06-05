@@ -78,7 +78,7 @@ export const sources: SourceData[] = [
 	},
 	{
 		name: "Brotato",
-		URL: "404.html",
+		URL: "https://skibidi-math.github.io/brotato/",
 		description:
 			"This was the goated game before Celeste. Its a 2D rougelike where you make combos to kill monsters as a potato.",
 		category: "Rougelike",
