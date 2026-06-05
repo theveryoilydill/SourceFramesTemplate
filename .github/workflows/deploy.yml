@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  # allow manual runs from the Actions UI (you can choose a branch/ref)
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -42,10 +44,20 @@ jobs:
       - name: Build project
         run: pnpm build
 
+      - name: Show build output
+        run: |
+          echo "Listing build directory"
+          ls -la build || true
+          echo "Listing build/client directory"
+          ls -la build/client || true
+          echo "Files under build (first 200 lines):"
+          find build -maxdepth 3 -type f -print | sed -n '1,200p'
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./build/client/
+          # ensure we upload the client static output; avoid trailing slash issues
+          path: ./build/client
 
   deploy:
     name: Deploy
